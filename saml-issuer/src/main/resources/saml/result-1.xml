@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<samlp:Response xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" ID="f013543a-ba32-4c50-aa68-08fa74779aec"
+                IssueInstant="2022-03-13T13:03:39.939Z" Version="2.0"
+                xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">
+    <saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">ZXF</saml:Issuer>
+    <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:SignedInfo>
+            <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+            <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+            <ds:Reference URI="#f013543a-ba32-4c50-aa68-08fa74779aec">
+                <ds:Transforms>
+                    <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                    <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+                </ds:Transforms>
+                <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+                <ds:DigestValue>17pafl//MiqqTpagi7zeAfGbCJdLmg8joTtqKnzlXEQ=</ds:DigestValue>
+            </ds:Reference>
+        </ds:SignedInfo>
+        <ds:SignatureValue>
+            Iv/dv7rIcxBhpoBSMZRQojw+3+O7iOcIQWKimY8OxCeMBE1RrCJI+OTYvN4leei9apMI5p7u64Jp
+            FKOdVuqah5GZqmD9vVC0gIS83N/A4Gqj1iuu5K7nGZ0gBLQxD9QBNLaBZZctEnrVtAvlLaJgu1sY
+            HPafO/mbzpENZmE9+0puCF22uYjpHYTch8jT6f0VxayjWtJHhuSU8Y6VFHeA6SxwVIOU7Czyp2br
+            1K8TB6Uav0JZI8AnQl0ngWyrSXAONLrnIGg6BDD050ml+r/UmxCggUZxSluKiSLsubIDoNI0yagn
+            JupOGg1noKemtv6uIIEZsVRbQK5FUhFd4OpOnA==
+        </ds:SignatureValue>
+    </ds:Signature>
+    <samlp:Status xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol">
+        <samlp:StatusCode Value="urn:oasis:names:tc:SAML:2.0:status:Success"/>
+    </samlp:Status>
+    <saml:Assertion ID="5afac024-a3ef-4896-ac7a-f4004b4105fb" IssueInstant="2022-03-13T13:03:39.939Z" Version="2.0">
+        <saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">ZXF</saml:Issuer>
+        <saml:Subject>
+            <saml:NameID Format="urn:oasis:names:tc:SAML:2.0:nameid-format:persistent"
+                         xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">SAML Issue Test
+            </saml:NameID>
+            <saml:SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer">
+                <saml:SubjectConfirmationData NotOnOrAfter="2022-03-13T13:04:09.979Z" Recipient="SAML Consumer"/>
+            </saml:SubjectConfirmation>
+        </saml:Subject>
+        <saml:Conditions NotBefore="2022-03-13T13:03:39.939Z" NotOnOrAfter="2022-03-13T13:04:09.979Z">
+            <saml:AudienceRestriction xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">
+                <saml:Audience>SAML Consumer</saml:Audience>
+            </saml:AudienceRestriction>
+        </saml:Conditions>
+        <saml:AuthnStatement AuthnInstant="2022-03-13T13:03:39.939Z">
+            <saml:AuthnContext xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">
+                <saml:AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:Password</saml:AuthnContextClassRef>
+            </saml:AuthnContext>
+        </saml:AuthnStatement>
+        <saml:AttributeStatement xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">
+            <saml:Attribute Name="userId">
+                <saml:AttributeValue>u-davis</saml:AttributeValue>
+            </saml:Attribute>
+            <saml:Attribute Name="orderId">
+                <saml:AttributeValue>o-123456</saml:AttributeValue>
+            </saml:Attribute>
+            <saml:Attribute Name="targetUrl">
+                <saml:AttributeValue>http://localhost:9081/saml/consume</saml:AttributeValue>
+            </saml:Attribute>
+        </saml:AttributeStatement>
+    </saml:Assertion>
+</samlp:Response>

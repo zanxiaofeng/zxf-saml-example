@@ -1,0 +1,39 @@
+<samlp:Response Version="2.0" Destination="PLACE_HOLDER" ID="PLACE_HOLDER"
+                InResponseTo="PLACE_HOLDER" IssueInstant="1900-01-01T00:00:00.000Z"
+                xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">
+    <saml:Issuer>ZXF</saml:Issuer>
+    <samlp:Status>
+        <samlp:StatusCode Value="urn:oasis:names:tc:SAML:2.0:status:Success"/>
+    </samlp:Status>
+    <saml:Assertion Version="2.0" ID="PLACE_HOLDER_ID" IssueInstant="1900-01-01T00:00:00.000Z">
+        <saml:Issuer>ZXF</saml:Issuer>
+        <saml:Subject>
+            <saml:NameID Format="urn:oasis:names:tc:SAML:2.0:nameid-format:persistent">SAML Issue Test</saml:NameID>
+            <saml:SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer">
+                <saml:SubjectConfirmationData InResponseTo="PLACE_HOLDER"
+                                              NotOnOrAfter="1900-01-01T00:00:00.000Z" Recipient="SAML Consumer"/>
+            </saml:SubjectConfirmation>
+        </saml:Subject>
+        <saml:Conditions NotBefore="1900-01-01T00:00:00.000Z" NotOnOrAfter="1900-01-01T00:00:00.000Z">
+            <saml:AudienceRestriction>
+                <saml:Audience>SAML Consumer</saml:Audience>
+            </saml:AudienceRestriction>
+        </saml:Conditions>
+        <saml:AuthnStatement AuthnInstant="1900-01-01T00:00:00.000Z">
+            <saml:AuthnContext>
+                <saml:AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:Password</saml:AuthnContextClassRef>
+            </saml:AuthnContext>
+        </saml:AuthnStatement>
+        <saml:AttributeStatement>
+            <saml:Attribute Name="userId">
+                <saml:AttributeValue>PLACE_HOLDER</saml:AttributeValue>
+            </saml:Attribute>
+            <saml:Attribute Name="orderId">
+                <saml:AttributeValue>PLACE_HOLDER</saml:AttributeValue>
+            </saml:Attribute>
+            <saml:Attribute Name="targetUrl">
+                <saml:AttributeValue>PLACE_HOLDER</saml:AttributeValue>
+            </saml:Attribute>
+        </saml:AttributeStatement>
+    </saml:Assertion>
+</samlp:Response>

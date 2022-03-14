@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<samlp:Response xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" ID="49e42853-874b-4f92-8cd2-129b2eddeecd"
+                IssueInstant="2022-03-13T12:54:11.802Z" Version="2.0"
+                xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">
+    <saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">ZXF</saml:Issuer>
+    <samlp:Status xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol">
+        <samlp:StatusCode Value="urn:oasis:names:tc:SAML:2.0:status:Success"/>
+    </samlp:Status>
+    <saml:Assertion ID="1bb7d85b-0f05-45c1-9b9e-bbb5b5af270b" IssueInstant="2022-03-13T12:54:11.802Z" Version="2.0"
+                    xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">
+        <saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">ZXF</saml:Issuer>
+        <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+            <ds:SignedInfo>
+                <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+                <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+                <ds:Reference URI="#1bb7d85b-0f05-45c1-9b9e-bbb5b5af270b">
+                    <ds:Transforms>
+                        <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                        <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+                    </ds:Transforms>
+                    <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+                    <ds:DigestValue>W15RXoi5rcTIrvoXbTKij6gHuJKPVpMYQR9ZmP9p0eg=</ds:DigestValue>
+                </ds:Reference>
+            </ds:SignedInfo>
+            <ds:SignatureValue>
+                Cx6Uylu1CXan0lMmDal1w2aUh7ZAmVtKVMEe6cC78iU4dHWOOddxG3UInXsVF+rPTiTRVmDO9GX6
+                7s30KzYlpMsp6D19sH/UaNV+BpMv9vWta3U9gLXRj0xkxd/7oT5r6FPEbmWGs+sgHRL8ixi8zW+9
+                aOvQTQwFc4wS96E7Sldsc7SALB2M3iOF8zMQktENqQAa122DkyopIl7xJj5pRI4yRHmPprNHb5tf
+                Wq/an2E4ooN74zuuwmiwbQLBaCxkLkAbSHsGns8TcUeP422N0rr5gTWBdmpUXINWf/X6zlnZ6zAD
+                qT09W1qPRdW7yR2/oPhIK4sB638JtCxhxDbjCg==
+            </ds:SignatureValue>
+        </ds:Signature>
+        <saml:Subject>
+            <saml:NameID Format="urn:oasis:names:tc:SAML:2.0:nameid-format:persistent"
+                         xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">SAML Issue Test
+            </saml:NameID>
+            <saml:SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer">
+                <saml:SubjectConfirmationData NotOnOrAfter="2022-03-13T12:54:41.818Z" Recipient="SAML Consumer"/>
+            </saml:SubjectConfirmation>
+        </saml:Subject>
+        <saml:Conditions NotBefore="2022-03-13T12:54:11.802Z" NotOnOrAfter="2022-03-13T12:54:41.818Z">
+            <saml:AudienceRestriction xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">
+                <saml:Audience>SAML Consumer</saml:Audience>
+            </saml:AudienceRestriction>
+        </saml:Conditions>
+        <saml:AuthnStatement AuthnInstant="2022-03-13T12:54:11.802Z">
+            <saml:AuthnContext xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">
+                <saml:AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:Password</saml:AuthnContextClassRef>
+            </saml:AuthnContext>
+        </saml:AuthnStatement>
+        <saml:AttributeStatement xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">
+            <saml:Attribute Name="userId">
+                <saml:AttributeValue>u-davis</saml:AttributeValue>
+            </saml:Attribute>
+            <saml:Attribute Name="orderId">
+                <saml:AttributeValue>o-123456</saml:AttributeValue>
+            </saml:Attribute>
+            <saml:Attribute Name="targetUrl">
+                <saml:AttributeValue>http://localhost:9081/saml/consume</saml:AttributeValue>
+            </saml:Attribute>
+        </saml:AttributeStatement>
+    </saml:Assertion>
+</samlp:Response>
