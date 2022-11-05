@@ -17,6 +17,7 @@ public class CredentialUtil {
 
     private static RSAPublicKey loadPublicKey() throws Exception {
         URL publicKeyURL = CredentialUtil.class.getClassLoader().getResource("keys/public-key");
+        // Please note "Files.readAllBytes(Paths.get(publicKeyURL.toURI()))" will fail when run this program by jar
         byte[] encodedPublicKey = Files.readAllBytes(Paths.get(publicKeyURL.toURI()));
         return (RSAPublicKey) KeyFactory.getInstance("RSA").generatePublic(new X509EncodedKeySpec(encodedPublicKey));
     }

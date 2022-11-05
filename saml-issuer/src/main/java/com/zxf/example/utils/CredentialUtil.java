@@ -20,12 +20,14 @@ public class CredentialUtil {
 
     private static RSAPublicKey loadPublicKey() throws Exception {
         URL publicKeyURL = CredentialUtil.class.getClassLoader().getResource("keys/public-key");
+        // Please note "Files.readAllBytes(Paths.get(publicKeyURL.toURI()))" will fail when run this program by jar
         byte[] encodedPublicKey = Files.readAllBytes(Paths.get(publicKeyURL.toURI()));
         return (RSAPublicKey) KeyFactory.getInstance("RSA").generatePublic(new X509EncodedKeySpec(encodedPublicKey));
     }
 
     private static RSAPrivateKey loadPrivateKey() throws Exception {
         URL privateKeyURL = CredentialUtil.class.getClassLoader().getResource("keys/private-key");
+        // Please note "Files.readAllBytes(Paths.get(privateKeyURL.toURI()))" will fail when run this program by jar
         byte[] encodedPrivateKey = Files.readAllBytes(Paths.get(privateKeyURL.toURI()));
         return (RSAPrivateKey) KeyFactory.getInstance("RSA").generatePrivate(new PKCS8EncodedKeySpec(encodedPrivateKey));
     }
